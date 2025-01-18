@@ -142,17 +142,25 @@ main>section {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.feature-title{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-.section-title{
+#feature-section-title{
   border-left: 8px solid rgb(255, 144, 14);
   font-size: 4rem;
   font-weight: 600;
   padding-left: 20px;
+}
+.feature-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#feature{
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.section-title{
+  font-size: 4rem;
+  font-weight: 600;
 }
 .section-description{
   margin-top: 0px;
@@ -176,32 +184,55 @@ main>section {
   font-weight: 700;
 }
 
+/* third section */
+.fact-card{
+  border: 1px solid rgb(255, 144, 14);
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fact-card:hover{
+  background-color: rgb(159, 217, 217);
+}
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name{
+  font-size: 1.25rem; 
+  font-weight: 600;
+  margin-top: 10px;
+}
+.fact-description{
+  max-width: 540px;
+  margin-bottom: 80px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* fivth part */
+.sponsor-info{
+  max-width: 540px;
+  text-align: center;
+  margin: 50px auto;
+}
+.sopnsor-companies{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 50px;
+}
+.sopnsor-companies img{
+  filter: grayscale(100%);
+}
 
 
 
@@ -215,15 +246,36 @@ main>section {
 
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .features{
     flex-direction: column;
   }
 
-  .team-img-container {
+  .team-img-container, .facts-container, .sopnsor-companies{
     grid-template-columns: repeat(1, 1fr);
   }
 
   .our-features {
     margin-left: 20px;
   }
+  .facts-container{
+    justify-content: center;
+    gap: 24px;
+  }
+  .sopnsor-companie{
+    gap: 24px;
+  }
 }
+
+@media screen and (min-width:576px) and (max-width:992px) {
+  .teams{
+    flex-direction: column;
+  }
+  .our-features {
+    margin-left: 50px;
+  }
+  .sopnsor-companies{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
